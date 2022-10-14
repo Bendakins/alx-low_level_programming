@@ -2,12 +2,14 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * main - Check if a number.
+ * @void: Null value
  *
- * Return: Always 0 (Success)
+ * Description: Print if a number is positive, negative or zero
+ * Return: Zero value
  */
+
 int main(void)
 {
 	int n;
@@ -26,6 +28,5 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-
 	return (0);
 }
