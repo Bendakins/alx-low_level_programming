@@ -1,20 +1,26 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_diagsums - sums up digits in an array
- * @a: the array of ints digits
- * @size: size of the array
- * Return: void
+ * print_diagsums - function that prints the sum of the two diagonals
+ *@a: first value -char
+ *@size: second value -int
  */
 void print_diagsums(int *a, int size)
 {
-	int i;
-	unsigned int sum, sum1;
+	int i, j, suma_1 = 0, suma_2 = 0, k, l = 0;
 
+	k = size - 1;
 	for (i = 0; i < size; i++)
 	{
-		sum += a[(size * i) + i];
-		sum1 += a[(size * (i + 1)) - (i + 1)];
+		for (j = 0; j < size; j++)
+		{
+			if (i == j)
+				suma_1 += a[l];
+			if (j == k)
+				suma_2 += a[l];
+			l++;
+		}
+		k--;
 	}
-	printf("%d, %d\n", sum, sum1);
+	printf("%i, %i\n", suma_1, suma_2);
 }
